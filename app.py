@@ -2,7 +2,7 @@ import requests
 
 # 🔹 CONFIGURAÇÕES (vamos preencher depois)
 PIPEFY_TOKEN = "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJQaXBlZnkiLCJpYXQiOjE3NzQzOTYyMTgsImp0aSI6ImFjOWE3OGNlLTk4NjUtNDY4MC04MWE2LWY2ODc1NGQ3NmNlMiIsInN1YiI6MzA2NzU2NDE5LCJ1c2VyIjp7ImlkIjozMDY3NTY0MTksImVtYWlsIjoiYW5hLm5hc2NpbWVudG9AZWRpZmlxdWVqci5jb20ifSwidXNlcl90eXBlIjoiYXV0aGVudGljYXRlZCJ9.2VY-"
-PIPE_ID = "COLE_SEU_PIPE_ID_AQUI"
+PIPE_ID = "306967557"
 
 def criar_card(nome, email, resposta):
     url = "https://api.pipefy.com/graphql"
