@@ -34,3 +34,4 @@ def criar_card(nome, email, resposta):
 
 # 🔹 TESTE
 criar_card("Teste automático", "teste@email.com", "Funcionou 🚀")
+# teste
