@@ -29,7 +29,9 @@ mutation {{
     "Content-Type": "application/json"
 }
 
-    requests.post(url, json={"query": query}, headers=headers)
+    response = requests.post(url, json={"query": query}, headers=headers)
+
+print(response.text)
 
 
 # 🔹 TESTE
