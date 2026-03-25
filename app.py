@@ -29,7 +29,7 @@ mutation {{
     "Content-Type": "application/json"
 }
 
-    requests.post(url, json={{"query": query}}, headers=headers)
+    requests.post(url, json={"query": query}, headers=headers)
 
 
 # 🔹 TESTE
