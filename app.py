@@ -8,26 +8,26 @@ def criar_card(nome, email, resposta):
     url = "https://api.pipefy.com/graphql"
 
     query = f'''
-    mutation {{
-      createCard(input: {{
-        pipe_id: {PIPE_ID},
-        fields_attributes: [
-          {{field_id: "nome", field_value: "{nome}"}},
-          {{field_id: "email", field_value: "{email}"}},
-          {{field_id: "resposta", field_value: "{resposta}"}}
-        ]
-      }}) {{
-        card {{
-          id
-        }}
-      }}
+mutation {{
+  createCard(input: {{
+    pipe_id: {PIPE_ID},
+    fields_attributes: [
+      {{"field_id": "nome", "field_value": nome}},
+      {{"field_id": "email", "field_value": email}},
+      {{"field_id": "resposta", "field_value": resposta}}
+    ]
+  }}) {{
+    card {{
+      id
     }}
-    '''
+  }}
+}}
+'''
 
-    headers = {{
-        "Authorization": f"Bearer {{PIPEFY_TOKEN}}",
-        "Content-Type": "application/json"
-    }}
+    headers = {
+    "Authorization": f"Bearer {PIPEFY_TOKEN}",
+    "Content-Type": "application/json"
+}
 
     requests.post(url, json={{"query": query}}, headers=headers)
 
