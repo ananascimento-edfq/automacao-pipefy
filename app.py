@@ -19,11 +19,11 @@ mutation {{
 }}
 """
 
-headers = {{
+headers = {
     "Authorization": f"Bearer {{PIPEFY_TOKEN}}",
     "Content-Type": "application/json"
-}}
+}
 
-response = requests.post(url, json={{"query": query}}, headers=headers)
+response = requests.post(url, json={"query": query}, headers=headers)
 
 print(response.text)
